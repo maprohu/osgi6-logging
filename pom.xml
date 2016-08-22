@@ -7,7 +7,7 @@
         <relativePath>../osgi6-parent</relativePath>
     </parent>
     <artifactId>osgi6-logging</artifactId>
-    <version>1.0.10</version>
+    <version>1.0.11-SNAPSHOT</version>
     <packaging>jar</packaging>
     <build>
         <plugins>
@@ -60,6 +60,6 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/maprohu/osgi6-logging.git</developerConnection>
-        <tag>osgi6-logging-1.0.10</tag>
+        <tag>HEAD</tag>
     </scm>
 </project>
