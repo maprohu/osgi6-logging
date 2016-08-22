@@ -19,11 +19,37 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
                     <instructions>
                         <Embed-Dependency>*;scope=compile|runtime</Embed-Dependency>
                         <Embed-Transitive>true</Embed-Transitive>
-                        <Import-Package> !sun.*, !scala.reflect.*, * </Import-Package>
+                        <Export-Package>!org.slf4j.impl,org.slf4j.*</Export-Package>
+                        <Import-Package>!sun.*,!groovy.*,!javax.jms.*,!javax.mail.*,!org.codehaus.*,*</Import-Package>
                     </instructions>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <dependencies> </dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.21</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>osgi6</groupId>
+            <artifactId>osgi6-multi-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 </project>
